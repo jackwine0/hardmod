@@ -1,0 +1,145 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+* {
+  font-family: 'Montserrat';
+}
+
+/* Inspiration.css */
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  height: 400px; /* Adjusted the height */
+  overflow: hidden; /* Ensure content does not spill out */
+  box-sizing: border-box; /* Ensure padding is included in the total width and height */
+}
+
+.text-column {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.text-column h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-column p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.explore-button {
+  padding: 10px 20px;
+  background-color: #CD7F32;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.explore-button:hover {
+  background-color: goldenrod;
+  transform: scale(1.1);
+}
+
+.carousel-column {
+  flex: 7;
+  position: relative;
+  height: 100%; /* Ensure carousel-column takes the full height */
+  box-sizing: border-box;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 20px;
+  height: 100%; /* Make carousel full height */
+}
+
+.carousel-body {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.carousel-button.left {
+  position: absolute;
+  left: 10px;
+}
+
+.carousel-button.right {
+  position: absolute;
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.carousel-screen {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.carousel-stripe {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.carousel-tile {
+  min-width: 100%;
+  height: 100%; /* Ensure tiles take full height */
+  display: flex; /* Flex container to center the image */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%; /* Ensure images take full height */
+  object-fit: contain; /* Maintain aspect ratio and cover the container */
+  display: block;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #CEB26D;
+}

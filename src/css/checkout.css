@@ -1,0 +1,94 @@
+/* General layout for the checkout page */
+.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-checkout, .checkout-guarantee {
+  background-color: #fff; /* white background */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.billing-details,
+.order-summary {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 48%;
+  justify-self: flex-start;
+}
+
+.billing-details h2,
+.order-summary h2 {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.billing-details form label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.billing-details form input,
+.billing-details form select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.billing-details form input:focus,
+.billing-details form select:focus {
+  border-color: #007bff;
+}
+
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-summary table th,
+.order-summary table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+}
+
+.order-summary table th {
+  background-color: #fff;
+}
+
+.order-summary table tfoot td {
+  font-weight: bold;
+}
+
+.order-summary button {
+  display: block;
+  width: 40%;
+  padding: 15px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.order-summary button:hover {
+  background-color: goldenrod;
+}
