@@ -1,75 +1,30 @@
-/* Container styles */
-.footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  text-align: left;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-style: normal; /* normal font style */
 }
 
-/* Row styles */
-.footer-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 10px;
+.content-enter {
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
-/* Column styles */
-.footer-col {
-  flex: 1;
-  margin: 10px;
-  min-width: 200px;
+.content-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
 }
 
-/* Heading styles */
-.footer-col h4 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+.content-leave {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* List styles */
-.footer-col ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.footer-col li {
-  margin: 5px 0;
-}
-
-.footer-col a {
-  text-decoration: none;
-  color: #000;
-  display: inline-block; /* Ensure inline-block to allow transform */
-  transition: transform 0.2s;
-}
-
-.footer-col a:hover {
-  transform: scale(1.1);
-}
-
-/* Input and button styles */
-.footer-col input {
-  padding: 5px;
-  margin-right: 5px;
-}
-
-.footer-col button {
-  padding: 5px 10px;
-  cursor: pointer;
-  border: 2px solid #AA6C39;
-  background-color: white;
-  color: #AA6C39;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.footer-col button:hover {
-  background-color: goldenrod;
-  color: #fff;
-}
-
-/* Copyright styles */
-.footer-copyright {
-  margin-top: 20px;
-  font-size: 0.8em;
-  color: #6c757d;
+.content-leave-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition-delay: 0.2s;
 }

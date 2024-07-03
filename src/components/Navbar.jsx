@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "../css/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ toggleCart }) => {
   return (
     <div className="navbar-container">
       <div className="navbar-logo">
@@ -20,18 +20,10 @@ const Navbar = () => {
       </div>
 
       <nav className="navbar-nav">
-        <NavLink to="/" className="navbar-nav-link">
-          Home
-        </NavLink>
-        <NavLink to="/shop" className="navbar-nav-link">
-          Shop
-        </NavLink>
-        <NavLink to="/about" className="navbar-nav-link">
-          About
-        </NavLink>
-        <NavLink to="/contact" className="navbar-nav-link">
-          Contact
-        </NavLink>
+        <NavLink to="/" className="navbar-nav-link">Home</NavLink>
+        <NavLink to="/shop" className="navbar-nav-link">Shop</NavLink>
+        <NavLink to="/about" className="navbar-nav-link">About</NavLink>
+        <NavLink to="/contact" className="navbar-nav-link">Contact</NavLink>
       </nav>
 
       <div className="navbar-actions">
@@ -62,7 +54,7 @@ const Navbar = () => {
           />
           <span className="link-text">Search</span>
         </NavLink>
-        <NavLink to="/cart" className="navbar-action-link">
+        <button onClick={toggleCart} className="navbar-action-link">
           <LazyLoadImage
             effect="blur"
             src="https://res.cloudinary.com/duicyr28v/image/upload/v1718905932/cart_pca8k7.svg"
@@ -70,7 +62,7 @@ const Navbar = () => {
             alt="Cart Icon"
           />
           <span className="link-text">Cart</span>
-        </NavLink>
+        </button>
       </div>
     </div>
   );

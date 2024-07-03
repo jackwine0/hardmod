@@ -1,69 +1,61 @@
+/* Navbar.css */
+
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .navbar-nav {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navbar-nav-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .navbar-nav-link:hover {
-    color: #007bff;
-  }
-  
-  .navbar-actions {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navbar-action-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-  }
-  
-  .navbar-action-link:hover {
-    color: #007bff;
-  }
-  
-  .navbar-action-link .link-text {
-    display: none; /* Hide the link text */
-  }
-  
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-logo-link strong {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-nav-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-nav-link:hover {
+  color: darkgoldenrod;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-action-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.navbar-action-link:hover {
+  color: darkgoldenrod;
+}
+
+.navbar-action-link .link-text {
+  display: none; /* Hide the link text */
+}
+

@@ -15,6 +15,7 @@ const Hero = () => {
         src="https://res.cloudinary.com/duicyr28v/image/upload/v1719025337/Rectangle_1_j8lh3g.jpg"
         alt={pageTitle}
         className="hero-image"
+        width="50"
       />
       <div className="hero-content">
         <img src="https://res.cloudinary.com/duicyr28v/image/upload/v1718149698/Meubel_House_Logos-05_rfwvsf.png" alt="Logo" className="logo" style={{ width: 50, height: 50 }} />
@@ -39,6 +40,8 @@ const getPageTitle = (pathname) => {
       return 'Cart';
     case '/blog':
       return 'Blog';
+      case '/compare':
+      return 'Proudct Comparision';
     default:
       return 'Home';
   }
@@ -58,6 +61,8 @@ const getPageSubtitle = (pathname) => {
       return '<b>Home</b>>cart';
     case '/blog':
       return '<b>Home</b>>blog';
+      case '/compare':
+        return '<b>Home</b>>Comparision';
     default:
       return 'Welcome to our website';
   }

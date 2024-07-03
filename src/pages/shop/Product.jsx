@@ -1,62 +1,74 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ShopContext } from "../../context/ShopContext";
-import { Heart, Share2, ExternalLink } from "react-feather";
-import "../../css/Shop.css";
+import "../../css/Product.css";
 
-const cloudName = 'duicyr28v'; // Replace with your actual Cloudinary cloud name
+const cloudName = "duicyr28v"; // Replace with your actual Cloudinary cloud name
 
 const Product = ({ data }) => {
-  const { id, productName, price, productImage } = data;
-  const { addToCart, cartItems } = useContext(ShopContext);
+  const { id, productName, price, productImage, description } = data;
+  const { addToCart, addToComparison, cartItems } = useContext(ShopContext);
   const [isHovered, setIsHovered] = useState(false);
   const cartItemCount = cartItems[id];
+  const navigate = useNavigate();
 
   const handleAddToCart = () => {
     addToCart(id);
   };
 
-  const handleLike = () => {
-    console.log(`Liked ${productName}`);
-  };
-
-  const handleCompare = () => {
-    console.log(`Compare ${productName}`);
-  };
-
-  const handleShare = () => {
-    console.log(`Share ${productName}`);
+  const handleAddToComparison = () => {
+    addToComparison(data);
+    navigate("/compare"); // Navigate to the compare page
   };
 
   return (
-    <div className="product" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+    <div
+      className="product"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <Link to={`/products/${id}`} className="image-container">
         <img
-          src={productImage} // Assuming productImage is correctly imported and points to the image path
+          src={productImage}
           alt={productName}
           className="product-image"
         />
         {isHovered && (
-          <div className="hover-actions">
-            <span className="action" onClick={handleLike}>
-              <Heart size={24} />
-            </span>
-            <span className="action" onClick={handleCompare}>
-              <ExternalLink size={24} />
-            </span>
-            <span className="action" onClick={handleShare}>
-              <Share2 size={24} />
-            </span>
+          <div className="icon-grid">
+            <div className="icon-item">
+              <img
+                src={`https://res.cloudinary.com/${cloudName}/image/upload/v1719132005/gridicons_share_ndo42d.svg`}
+                alt="Share"
+              />
+              <p className="icon-text">Share</p>
+            </div>
+            <div className="icon-item" onClick={handleAddToComparison}>
+              <img
+                src={`https://res.cloudinary.com/${cloudName}/image/upload/v1719132005/compare-svgrepo-com_1_r3v9df.svg`}
+                alt="Compare"
+              />
+              <p className="icon-text">Compare</p>
+            </div>
+            <div className="icon-item">
+              <img
+                src={`https://res.cloudinary.com/${cloudName}/image/upload/v1719132005/Heart_y3aubs.svg`}
+                alt="Like"
+              />
+              <p className="icon-text">Like</p>
+            </div>
           </div>
         )}
       </Link>
       <div className="description">
         <p><b>{productName}</b></p>
+        <p>{description}</p>
         <p>${price}</p>
       </div>
-      <button className="addToCartBttn" onClick={handleAddToCart}>
-        Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
-      </button>
+      {isHovered && (
+        <button className="addToCartBttn" onClick={handleAddToCart}>
+          Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+        </button>
+      )}
     </div>
   );
 };

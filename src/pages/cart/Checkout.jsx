@@ -1,18 +1,17 @@
 import React, { useContext, useState } from "react";
 import { ShopContext } from "../../context/ShopContext";
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../../css/checkout.css";
 import { PRODUCTS } from "../../Products";
 import Hero from "../../components/Hero";
 import Guarantee from "../../components/gurantee";
 
 const Checkout = () => {
-  const { checkout } = useContext(ShopContext);
-  const location = useLocation();
-  const cartItems = location.state?.cartItems;
+  const { cartItems, checkout } = useContext(ShopContext);
+  const navigate = useNavigate();
 
-  if (!cartItems) {
-    return <div>Cart items not found</div>;
+  if (!cartItems || Object.keys(cartItems).length === 0) {
+    return <div>No items in cart.</div>;
   }
 
   const [billingDetails, setBillingDetails] = useState({
@@ -33,7 +32,7 @@ const Checkout = () => {
       const product = PRODUCTS.find((product) => product.id === parseInt(itemId));
       if (product) {
         orderSummary.push({
-          productName: product.productName, // Changed to productName
+          productName: product.productName,
           quantity,
           subtotal: product.price * quantity,
         });
@@ -148,7 +147,7 @@ const Checkout = () => {
             <tbody>
               {orderSummary.map((item, index) => (
                 <tr key={index}>
-                  <td>{item.productName}</td> {/* Changed to productName */}
+                  <td>{item.productName}</td>
                   <td>{item.quantity}</td>
                   <td>${item.subtotal.toFixed(2)}</td>
                 </tr>

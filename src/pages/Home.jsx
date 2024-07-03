@@ -7,13 +7,12 @@ import { ShopContext } from "../context/ShopContext";
 import { PRODUCTS } from "../Products";
 import IdeaShare from "../components/IdeaShare";
 import Inspiration from "../components/Inspiration";
-import { Heart, ExternalLink, Share2 } from 'react-feather'; // Import icons
+import Product from "../pages/shop/Product"; // Import Product component
 
 const Home = () => {
   const navigate = useNavigate();
   const { addToCart } = useContext(ShopContext);
-  const [products, setProducts] = useState(PRODUCTS.slice(0, 8)); // show only 8 products
-  const [hoveredProductId, setHoveredProductId] = useState(null);
+  const [products, setProducts] = useState(PRODUCTS.slice(0, 8)); // show only 8 products initially
 
   const categories = [
     {
@@ -57,7 +56,7 @@ const Home = () => {
             <strong>
               <p>New Arrival</p>
             </strong>
-            <h1 className="hero-title">Discover Our New Collection</h1>
+            <h1 className="hero-title">Discover Our <br />New Collection</h1>
             <p className="hero-paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
               cumque possimus maiores unde repudiandae exercitationem veniam.
@@ -74,7 +73,7 @@ const Home = () => {
 
       <div className="categories-section">
         <div className="categories-text">
-          <h1 className="categories-heading">Browse The Range</h1>
+          <h2 className="categories-heading">Browse The Range</h2>
           <p className="categories-paragraph">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
             error.
@@ -101,41 +100,7 @@ const Home = () => {
         <h2>Our Products</h2>
         <div className="products-grid-container">
           {products.map((product) => (
-            <div
-              key={product.id}
-              className="product-card"
-              id={`card-${product.id}`}
-              onMouseEnter={() => setHoveredProductId(product.id)}
-              onMouseLeave={() => setHoveredProductId(null)}
-            >
-              <LazyLoadImage
-                effect="blur"
-                src={product.productImage}
-                alt={product.productName}
-                className="product-image"
-              />
-              <p className="product-title">{product.productName}</p>
-              <p className="product-price">${product.price}</p>
-              <button
-                className="addToCartButton"
-                onClick={() => addToCart(product.id)}
-              >
-                Add to Cart
-              </button>
-              {hoveredProductId === product.id && (
-                <div className="hover-actions">
-                  <span className="action" onClick={() => alert('Liked')}>
-                    <Heart size={24} />
-                  </span>
-                  <span className="action" onClick={() => alert('Compared')}>
-                    <ExternalLink size={24} />
-                  </span>
-                  <span className="action" onClick={() => alert('Shared')}>
-                    <Share2 size={24} />
-                  </span>
-                </div>
-              )}
-            </div>
+            <Product key={product.id} data={product} />
           ))}
         </div>
         <div className="show-more-container">

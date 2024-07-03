@@ -1,74 +1,285 @@
-.product-detail {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .product-image {
-    width: 300px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure image covers container */
-    border-radius: 8px;
-  }
-  
-  .details {
-    flex: 1;
-    margin-left: 20px;
-  }
-  
-  .details h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .details p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .addToCartBtn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  .compareBtn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .social-icons {
-    margin-top: 20px;
-  }
-  
-  .social-icons span {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  /* Styles for hover actions */
-  .hover-actions {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .hover-actions .action {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* change from center to flex-start */
+  padding: 10px 30px;
+  /* add 20px padding to the left and right */
+  background-color: #ffe3ce;
+  /* papawhip background color */
+  margin-bottom: 20px;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumb li {
+  margin-right: 20px;
+  list-style: none;
+}
+
+.breadcrumb li:not(:last-child):after {
+  content: " > ";
+  color: black;
+}
+
+.breadcrumb li a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+  color: darkgoldenrod;
+}
+
+.breadcrumb li.active {
+  color: grey;
+}
+
+/* Two-column layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px -10px;
+}
+
+.column-50 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 10px;
+}
+
+.product-image-container {
+  width: 100%;
+  height: 300px;
+  /* adjust height to your liking */
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-imageX {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px 30px;
+}
+
+.product-details {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Size and color options */
+.size-options,
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.size-btn,
+.color-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.size-btn.active,
+.color-btn.active {
+  transform: scale(1.2);
+}
+
+.color-btn-blue.active {
+  transform: scale(1.1);
+
+}
+
+.color-btn-black.active {
+  transform: scale(1.1);
+
+}
+
+.color-btn-gold.active {
+  transform: scale(1.1);
+
+}
+
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+
+}
+
+
+.color-btn-blue {
+  background-color: #007bff;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color-btn-blue:hover {
+  transform: scale(1.1);
+
+}
+
+.color-btn-black:hover {
+  transform: scale(1.1);
+
+}
+
+.color-btn-gold:hover {
+  transform: scale(1.1);
+
+}
+
+.color-btn-black {
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.color-btn-gold {
+  background-color: #ffd700;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.color-btn {
+  padding: 0px 30px;
+}
+
+
+/* Product actions */
+.product-actions {
+  margin-top: 20px;
+}
+
+.addToCartBtn,
+.compareBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.2s;
+}
+
+.addToCartBtn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+.addToCartBtn:hover {
+  background-color: darkgoldenrod;
+}
+
+.compareBtn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+.compareBtn:hover {
+  background-color: darkgoldenrod;
+}
+
+
+/**Tabbar**/
+
+.tabbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tablinks {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tablinks:hover {
+  background-color: #ccc;
+}
+
+.tablinks.active {
+  color: #000;
+  font-weight: bold; /* Add this line to make the text bold */
+}
+
+.tabcontent {
+  padding: 20px;
+}
+
+
+h3 {
+  margin-top: 0;
+}
+
+/* Products Section */
+.products-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  color: #000;
+}
+.show-more-container {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.show-more-button {
+  background-color: white;
+  color: #B88E2F;
+  border: 2px solid #B88E2F;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.show-more-button:hover {
+  background-color: goldenrod;
+  color: white;
+}

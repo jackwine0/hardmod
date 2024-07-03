@@ -1,0 +1,147 @@
+/* global.css */
+
+.cart-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3); /* transparent black background */
+  filter: blur(2px); /* blur effect */
+  z-index: 1000; /* make sure it's on top of everything */
+}
+
+.cart-open * {
+  pointer-events: none; /* disable pointer events on all elements */
+}
+
+.cart-open.cart-container {
+  position: relative;
+  z-index: 1001; /* make sure the cart container is on top of the blur effect */
+  background-color: #fff; /* white background for the cart container */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* sidecart.css */
+
+.sidebar-cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  width: 300px;
+  height: auto;
+  background-color: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar-cart.open {
+  transform: translateX(0);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+}
+
+.productsX {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.productxx {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.product-linkx {
+  display: flex;
+}
+
+.product-imagex img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.product-details {
+  margin-left: 10px;
+}
+
+.qty-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+}
+
+.qty-input {
+  width: 2rem;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.price {
+  margin-left: 10px;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: red;
+}
+
+.totals {
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.action-buttonsx {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.view-cart-button,
+.checkout-button {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: solid 1px black;
+  border-radius: 9px;
+}
+
+.view-cart-button:hover,
+.checkout-button:hover {
+  background-color: darkgoldenrod;
+  color: white;
+}
