@@ -55,7 +55,7 @@
 }
 
 .product-image-container {
-  width: 100%;
+  width: 300px;
   height: 300px;
   /* adjust height to your liking */
   margin: 0 auto 20px;
@@ -283,3 +283,4 @@ h3 {
   background-color: goldenrod;
   color: white;
 }
+
