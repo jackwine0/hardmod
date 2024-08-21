@@ -61,6 +61,7 @@
   margin: 0 auto 20px;
   border-radius: 10px;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 .product-imageX {
@@ -283,4 +284,3 @@ h3 {
   background-color: goldenrod;
   color: white;
 }
-
