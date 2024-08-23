@@ -7,24 +7,7 @@ body {
   font-style: normal; /* normal font style */
 }
 
-.content-enter {
-  opacity: 0;
-  transform: translateX(-100%);
+.content {
+margin-top: 35px;
 }
 
-.content-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.2s;
-}
-
-.content-leave {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.content-leave-active {
-  opacity: 0;
-  transform: translateX(100%);
-  transition-delay: 0.2s;
-}
