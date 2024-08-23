@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import "../css/Home.css";
-import { ShopContext } from "../context/ShopContext";
-import { PRODUCTS } from "../Products";
-import IdeaShare from "../components/IdeaShare";
-import Inspiration from "../components/Inspiration";
-import Product from "../pages/shop/Product"; // Import Product component
+import "./Home.css";
+import { ShopContext } from "../../context/ShopContext";
+import { PRODUCTS } from "../../Products";
+import IdeaShare from "../../components/Ideashare/IdeaShare";
+import Inspiration from "../../components/Inspo/Inspiration";
+import Product from "../shop/Product"; // Import Product component
 
 const Home = () => {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="home">
       <div className="hero-container">
         <LazyLoadImage
           effect="blur"

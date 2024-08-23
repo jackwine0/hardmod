@@ -137,3 +137,70 @@
 .indicator.active {
   background-color: #CEB26D;
 }
+
+
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .text-column {
+    flex: 1;
+    padding: 10px;
+  }
+  .carousel-column {
+    flex: 1;
+    height: auto;
+  }
+
+}
+
+/* Tablet devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    gap: 10px;
+  }
+  .text-column {
+    padding: 15px;
+  }
+  .carousel-column {
+    height: 300px;
+  }
+  .carousel-button {
+    padding: 5px;
+  }
+}
+
+/* Small desktop devices (max-width: 1280px) */
+@media (max-width: 1280px) {
+  .container {
+    gap: 15px;
+  }
+  .text-column {
+    padding: 20px;
+  }
+  .carousel-column {
+    height: 350px;
+  }
+  .carousel-button {
+    padding: 10px;
+  }
+}
+
+/* Large desktop devices (min-width: 1280px) */
+@media (min-width: 1280px) {
+  .container {
+    gap: 20px;
+  }
+  .text-column {
+    padding: 25px;
+  }
+  .carousel-column {
+    height: 400px;
+  }
+  .carousel-button {
+    padding: 15px;
+  }
+}

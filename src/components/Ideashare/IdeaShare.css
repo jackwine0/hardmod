@@ -1,0 +1,135 @@
+/* IdeaShare.css */
+
+.parent-container {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .header p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  .header h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .image-item {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .image-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-item img:hover {
+    transform: scale(1.05);
+  }
+  
+/* Mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .parent-container {
+    margin: 10px;
+    padding: 10px;
+  }
+  .header p {
+    font-size: 1em;
+  }
+  .header h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+  }
+  .image-item {
+    border-radius: 4px;
+  }
+  .image-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .parent-container {
+    margin: 15px;
+    padding: 15px;
+  }
+  .header p {
+    font-size: 1.1em;
+  }
+  .header h2 {
+    font-size: 1.7em;
+    margin-bottom: 18px;
+  }
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+  }
+  .image-item {
+    border-radius: 6px;
+  }
+}
+
+/* Small desktop devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .parent-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  .header p {
+    font-size: 1.2em;
+  }
+  .header h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .image-item {
+    border-radius: 8px;
+  }
+}
+
+/* Large desktop devices (min-width: 1280px) */
+@media screen and (min-width: 1280px) {
+  .parent-container {
+    margin: 25px;
+    padding: 25px;
+  }
+  .header p {
+    font-size: 1.3em;
+  }
+  .header h2 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+  }
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+  }
+  .image-item {
+    border-radius: 10px;
+  }
+}
+  

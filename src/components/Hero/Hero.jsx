@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import "../css/Hero.css"
+import "./Hero.css"
 
 const Hero = () => {
   const location = useLocation();

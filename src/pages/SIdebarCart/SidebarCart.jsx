@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ShopContext } from '../../context/ShopContext';
 import { PRODUCTS } from '../../Products';
-import '../../css/sidecart.css';
+import './sidecart.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const SidebarCart = ({ isCartOpen, toggleCart }) => {

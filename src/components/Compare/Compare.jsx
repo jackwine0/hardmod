@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { ShopContext } from "../context/ShopContext";
-import "../css/Compare.css";
-import { PRODUCTS } from "../Products";
-import Hero from "./Hero";
-import Guarantee from "./gurantee";
+import { ShopContext } from "../../context/ShopContext";
+import "./Compare.css";
+import { PRODUCTS } from "../../Products";
+import Hero from "../Hero/Hero";
+import Guarantee from "../Gurantee/gurantee";
 
 const Compare = () => {
   const { comparisonItems, addToComparison, removeFromComparison } = useContext(ShopContext);

@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../../context/ShopContext";
 import { useNavigate } from "react-router-dom";
-import "../../css/cart.css";
+import "./cart.css";
 import { PRODUCTS } from "../../Products";
-import Hero from "../../components/Hero";
-import Guarantee from "../../components/gurantee";
+import Hero from "../../components/Hero/Hero";
+import Guarantee from "../../components/Gurantee/gurantee";
 
 const Cart = () => {
   const { cartItems, checkout, addToCart, removeFromCart } = useContext(

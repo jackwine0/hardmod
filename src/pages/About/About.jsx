@@ -1,8 +1,8 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Hero from "../components/Hero";
-import Guarantee from "../components/gurantee";
-import "../css/about.css";
+import Hero from "../../components/Hero/Hero";
+import Guarantee from "../../components/Gurantee/gurantee";
+import "./about.css";
 
 const About = () => {
   return (

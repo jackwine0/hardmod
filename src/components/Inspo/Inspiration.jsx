@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import { useNavigate } from "react-router-dom";
-import "../css/Inspiration.css";
+import "./Inspiration.css";
 
 const Inspiration = () => {
   const slides = [

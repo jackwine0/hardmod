@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { PRODUCTS } from "../../Products";
 import Product from "./Product";
-import "../../css/Shop.css";
-import Hero from "../../components/Hero";
-import Guarantee from "../../components/gurantee";
+import "./Shop.css";
+import Hero from "../../components/Hero/Hero";
+import Guarantee from "../../components/Gurantee/gurantee";
 
 const Shop = () => {
   const [currentPage, setCurrentPage] = useState(1);

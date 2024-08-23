@@ -28,7 +28,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black; /* white text color */
   }
   
   .inner-container {
@@ -36,6 +35,10 @@
     margin: 0 auto; /* center horizontally */
     padding: 20px;
     z-index: 1;
+    border-radius: 10px;
+    box-shadow: #fff;
+    color: goldenrod;
+    background-color: rgba(101, 100, 100, 0.711);
   }
   
   h1 {

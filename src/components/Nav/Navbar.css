@@ -1,0 +1,155 @@
+/* Navbar container */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar container styling */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-logo-link img {
+  margin-right: 10px;
+}
+
+.navbar-logo strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Navbar links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.navbar-links:active {
+  color: goldenrod;
+}
+
+/* Icons section */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-links {
+  display: flex;
+  gap: 19px;
+}
+
+.icon-links a {
+  color: goldenrod;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.icon-links a:hover{
+  color: gold;
+}
+
+.icon-links a:active{
+  color: gold;
+}
+
+.cart-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: goldenrod;
+}
+
+/* Hamburger icon */
+.icon {
+  display: none;
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .navbar-links.responsive {
+    display: flex;
+  }
+
+  .icon {
+    display: block;
+    font-size: 24px;
+    color: #333;
+  }
+
+ 
+  .icon-links.responsive {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  .navbar-logo {
+    margin-right: auto;
+  }
+
+ 
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar-links {
+    display: flex;
+  }
+
+ 
+
+  .icon-links.responsive {
+    display: flex;
+  }
+
+ 
+}

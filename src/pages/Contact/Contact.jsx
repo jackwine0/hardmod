@@ -1,7 +1,7 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import '../css/Contact.css';
-import Guarantee from '../components/gurantee';
+import Hero from '../../components/Hero/Hero';
+import './Contact.css';
+import Guarantee from '../../components/Gurantee/gurantee';
 
 const Contact = () => {
   return (
