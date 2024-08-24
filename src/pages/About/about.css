@@ -1,61 +1,108 @@
-/* Container for the entire about page */
 .about-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Section with hero image */
-.hero-section {
-  margin-bottom: 20px;
-}
-
-/* Content section with 50/50 layout */
-.content-section {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   padding: 20px;
 }
 
-/* About section styling */
-.about-section {
-  width: 50%;
-  padding: 20px;
+.hero-section {
+  height: 300px;
+  background-color: #f7dc6f;
+  display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center; /* Center text on smaller screens */
 }
 
-.abt {
-  margin: auto;
-  width: 50%;
-  border-radius: 10px;
-  padding: 30px;
-  background-color: rgba(110, 80, 6, 0.834);
+/* For large screens (desktops) */
+@media (min-width: 992px) {
+  .content-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .about-section {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .text-over-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay effect */
+  }
 }
 
-/* Background image styling */
-.background-image {
-  border-radius: 10px;
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
+/* For medium screens (tablets) */
+@media (max-width: 991px) {
   .content-section {
     flex-direction: column;
   }
 
   .about-section {
     width: 100%;
-    margin-bottom: 20px; /* Ensures spacing between sections on mobile */
+    padding: 20px;
   }
 
   .background-image {
     width: 100%;
-    height: 50vh; /* Adjust height for better mobile view */
-    margin-left: 0;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .text-over-image {
+    position: relative;
+    padding: 20px;
+  }
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 576px) {
+  .hero-section {
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .inner-container {
+    padding: 15px;
+  }
+
+  .guarantee-section {
+    padding: 15px;
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .content-section {
+    padding: 10px;
+  }
+
+  .about-section {
+    padding: 15px;
   }
 }

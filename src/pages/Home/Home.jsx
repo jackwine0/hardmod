@@ -45,12 +45,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="hero-container">
-        <LazyLoadImage
-          effect="blur"
-          src="https://res.cloudinary.com/duicyr28v/image/upload/v1718151128/scandinavian-interior-mockup-wall-decal-background_1_qjphdo.png"
-          className="hero-background-image"
-          alt="Background Image"
-        />
+       
         <div className="hero-content-container">
           <div className="hero-text-box">
             <strong>
